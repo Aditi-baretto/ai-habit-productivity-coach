@@ -54,3 +54,15 @@ streamlit run app.py
 
 Aditi Baretto
 AI & Data Science Student
+
+---
+
+## 📸 App Preview
+
+### Main UI
+
+![Main UI](images/Main%20UI.jpeg)
+
+### Habit Analysis Result
+
+![Habit Analysis Result](images/Habit%20analysis%20result.jpeg)

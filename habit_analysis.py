@@ -1,20 +1,17 @@
 from langchain_ollama import OllamaLLM
+from prompts import HABIT_ANALYSIS_PROMPT
+
 
 llm = OllamaLLM(model="tinyllama")
 
 def analyze_habits(sleep, study, exercise, screen):
 
-    prompt = f"""
-    A student has these daily habits:
-
-    Sleep: {sleep} hours
-    Study: {study} hours
-    Exercise: {exercise} minutes
-    Screen time: {screen} hours
-
-    Analyze the productivity level and give suggestions to improve habits.
-    Also provide a productivity score out of 100.
-    """
+    prompt = HABIT_ANALYSIS_PROMPT.format(
+        sleep=sleep,
+        study=study,
+        exercise=exercise,
+        screen=screen
+    )
 
     response = llm.invoke(prompt)
 
